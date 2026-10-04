@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Music Room</string>
+    <string name="app_tagline">Your room. Your crowd. Your sound.</string>
+
+    <!-- Navigation -->
+    <string name="nav_events">Events</string>
+    <string name="nav_playlists">Playlists</string>
+    <string name="nav_devices">Devices</string>
+    <string name="nav_profile">Profile</string>
+    <string name="title_register">Create account</string>
+    <string name="title_verify_email">Verify your email</string>
+    <string name="title_forgot_password">Forgot password</string>
+    <string name="title_reset_password">New password</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_create_event">New event</string>
+    <string name="title_create_playlist">New playlist</string>
+    <string name="title_edit_profile">Edit profile</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Log out</string>
+    <string name="action_create_event">New event</string>
+    <string name="action_create_playlist">New playlist</string>
+    <string name="retry">Retry</string>
+    <string name="save">Save</string>
+    <string name="create_button">Create</string>
+
+    <!-- Form fields -->
+    <string name="field_email">Email</string>
+    <string name="field_password">Password</string>
+    <string name="field_confirm_password">Confirm password</string>
+    <string name="field_new_password">New password</string>
+    <string name="field_display_name">Display name</string>
+    <string name="field_code">6-digit code</string>
+    <string name="field_name">Name</string>
+    <string name="field_description">Description (optional)</string>
+    <string name="field_bio">Bio</string>
+    <string name="field_real_name">Real name</string>
+    <string name="field_city">City</string>
+    <string name="field_phone">Phone</string>
+    <string name="field_birth_date">Birth date (YYYY-MM-DD)</string>
+    <string name="field_api_url">Server address</string>
+    <string name="field_radius">Radius (meters)</string>
+
+    <!-- Authentication -->
+    <string name="login_button">Log in</string>
+    <string name="login_forgot">Forgot password?</string>
+    <string name="login_or">or</string>
+    <string name="login_google">Continue with Google</string>
+    <string name="login_no_account">New here? Create an account</string>
+    <string name="register_button">Create account</string>
+    <string name="register_have_account">Already have an account? Log in</string>
+    <string name="password_hint">At least 8 characters, with a letter and a digit</string>
+    <string name="verify_title">Check your inbox</string>
+    <string name="verify_message">We sent a 6-digit code to %1$s. Enter it to activate your account.</string>
+    <string name="verify_button">Verify</string>
+    <string name="verify_resend">Resend code</string>
+    <string name="verify_resent">A new code is on its way</string>
+    <string name="forgot_message">Enter your account email. We\'ll send you a code to choose a new password.</string>
+    <string name="forgot_button">Send reset code</string>
+    <string name="reset_message">Enter the code sent to %1$s and choose a new password.</string>
+    <string name="reset_button">Change password</string>
+    <string name="reset_done">Password changed. You can log in now.</string>
+
+    <!-- Validation -->
+    <string name="error_required">Required</string>
+    <string name="error_email_invalid">Enter a valid email address</string>
+    <string name="error_password_weak">At least 8 characters, with a letter and a digit</string>
+    <string name="error_password_mismatch">Passwords don\'t match</string>
+    <string name="error_code_invalid">Enter the 6-digit code</string>
+    <string name="error_url_invalid">Enter a full address, e.g. http://10.0.2.2:8080</string>
+    <string name="error_radius_invalid">Enter a radius between 10 and 50000 m</string>
+    <string name="error_location_missing">Set the venue location</string>
+    <string name="error_time_window">The end time must be after the start time</string>
+    <string name="error_birth_date">Use the YYYY-MM-DD format</string>
+
+    <!-- Server / network errors -->
+    <string name="error_network">Can\'t reach the server. Check the address in Settings.</string>
+    <string name="error_local_network">This server is on your local network: allow Music Room to access nearby devices in the system settings.</string>
+    <string name="error_bad_credentials">Wrong email or password</string>
+    <string name="error_forbidden">You don\'t have access to this</string>
+    <string name="error_not_found">Not found</string>
+    <string name="error_conflict">Someone changed this at the same time. Refresh and try again.</string>
+    <string name="error_rate_limited">Too many attempts. Wait a moment and try again.</string>
+    <string name="error_server">The server had a problem. Try again later.</string>
+    <string name="error_unknown">Something went wrong</string>
+    <string name="error_title">Couldn\'t load</string>
+    <string name="session_expired">Your session expired. Please log in again.</string>
+
+    <!-- Google sign-in -->
+    <string name="google_not_configured">Google sign-in isn\'t configured: set GOOGLE_WEB_CLIENT_ID in .env and rebuild.</string>
+    <string name="google_no_account">No Google account on this device. Add one in the system settings.</string>
+    <string name="google_failed">Google sign-in failed</string>
+
+    <!-- Lists -->
+    <string name="events_empty_title">No events yet</string>
+    <string name="events_empty_message">Create an event and let your guests vote for the next track.</string>
+    <string name="playlists_empty_title">No playlists yet</string>
+    <string name="playlists_empty_message">Start a playlist and edit it with friends in real time.</string>
+    <string name="devices_empty_title">No devices</string>
+    <string name="devices_empty_message">Devices appear here once you log in on them.</string>
+    <plurals name="events_intro_count">
+        <item quantity="one">%d live room</item>
+        <item quantity="other">%d live rooms</item>
+    </plurals>
+    <string name="events_intro">Suggest tracks and vote for what plays next.</string>
+    <plurals name="playlists_intro_count">
+        <item quantity="one">%d playlist</item>
+        <item quantity="other">%d playlists</item>
+    </plurals>
+    <string name="playlists_intro">Build playlists with friends, in real time.</string>
+    <string name="devices_intro_overline">Control delegation</string>
+    <string name="devices_intro">Each device has its own controls. Friends can only steer the ones you share.</string>
+    <string name="register_intro">Create your account to vote, edit and share music.</string>
+    <string name="devices_header_mine">Your devices</string>
+    <string name="devices_header_delegated">Control shared with you</string>
+    <string name="delegations_none">Nobody has shared control of a device with you yet.</string>
+    <string name="owner_subtitle">by %1$s · %2$s</string>
+    <plurals name="track_count">
+        <item quantity="one">%d track</item>
+        <item quantity="other">%d tracks</item>
+    </plurals>
+    <string name="device_current">This device</string>
+    <string name="device_subtitle">%1$s · v%2$s</string>
+    <string name="delegation_subtitle">%1$s\'s device</string>
+    <string name="event_created">Event created</string>
+    <string name="playlist_created">Playlist created</string>
+
+    <!-- Visibility and licenses -->
+    <string name="label_visibility">Visibility</string>
+    <string name="visibility_public">Public</string>
+    <string name="visibility_private">Private</string>
+    <string name="visibility_public_hint">Anyone can find it</string>
+    <string name="visibility_private_hint">Only invited people can find it</string>
+    <string name="label_vote_license">Who can vote</string>
+    <string name="label_edit_license">Who can edit</string>
+    <string name="license_everyone">Everyone</string>
+    <string name="license_invited">Invited people only</string>
+    <string name="license_location_time">People at the venue, during a time window</string>
+    <string name="license_invited_short">Invited only</string>
+    <string name="license_location_time_short">On site</string>
+    <string name="label_venue">Venue and time window</string>
+    <string name="label_details">Details</string>
+    <string name="license_everyone_desc">Anyone who can see the event votes</string>
+    <string name="license_invited_desc">Only your guests can vote</string>
+    <string name="license_location_time_title">At the venue, on time</string>
+    <string name="license_location_time_desc">Guests vote only when they are there, during the time window</string>
+    <string name="edit_everyone_desc">Anyone with access adds and moves tracks</string>
+    <string name="edit_invited_desc">Only the people you invite can edit</string>
+    <string name="label_account">Account</string>
+    <string name="use_current_location">Use my current location</string>
+    <string name="location_value">%1$.5f, %2$.5f</string>
+    <string name="location_not_set">No location set</string>
+    <string name="location_unavailable">Couldn\'t get your location. Is location turned on?</string>
+    <string name="location_permission_denied">Location permission is needed to set the venue</string>
+    <string name="pick_date">Date: %1$s</string>
+    <string name="pick_start">From %1$s</string>
+    <string name="pick_end">To %1$s</string>
+
+    <!-- Profile -->
+    <string name="profile_section_public">Public</string>
+    <string name="profile_section_public_hint">Visible to everyone</string>
+    <string name="profile_section_friends">Friends only</string>
+    <string name="profile_section_friends_hint">Visible to your friends</string>
+    <string name="profile_section_private">Private</string>
+    <string name="profile_section_private_hint">Only you can see this</string>
+    <string name="profile_section_music">Music preferences</string>
+    <string name="profile_section_accounts">Linked accounts</string>
+    <string name="profile_google">Google</string>
+    <string name="profile_linked">Linked</string>
+    <string name="profile_link">Link</string>
+    <string name="profile_unlink">Unlink</string>
+    <string name="profile_edit">Edit profile</string>
+    <string name="profile_email_verified">Verified</string>
+    <string name="profile_not_set">Not set</string>
+    <string name="profile_birth_date">Birth date</string>
+    <string name="profile_no_genres">No genres selected</string>
+    <string name="profile_saved">Profile saved</string>
+
+    <!-- Settings -->
+    <string name="settings_server_title">Server</string>
+    <string name="settings_server_hint">The app is a remote control for this API. On the emulator, 10.0.2.2 is your computer.</string>
+    <string name="settings_test">Test</string>
+    <string name="settings_reset">Use default</string>
+    <string name="settings_saved">Server address saved</string>
+    <string name="settings_test_ok">Connected: server is %1$s</string>
+    <string name="settings_client_title">Sent with every request</string>
+    <string name="settings_client_hint">The server logs these with each action.</string>
+    <string name="settings_platform">Platform</string>
+    <string name="settings_device">Device</string>
+    <string name="settings_app_version">App version</string>
+    <string name="settings_device_id">Device ID</string>
+
+    <string-array name="music_genres">
+        <item>Pop</item>
+        <item>Rock</item>
+        <item>Hip-hop</item>
+        <item>Electronic</item>
+        <item>Jazz</item>
+        <item>Classical</item>
+        <item>R&amp;B</item>
+        <item>Reggae</item>
+        <item>Metal</item>
+        <item>Indie</item>
+        <item>Latin</item>
+        <item>Afrobeat</item>
+        <item>Folk</item>
+        <item>Soul</item>
+        <item>Blues</item>
+    </string-array>
+</resources>

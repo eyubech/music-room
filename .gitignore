@@ -8,6 +8,8 @@ key.properties
 google-services.json
 
 # Java / Gradle
+# The wrapper jar is a third-party binary: `make setup` downloads and verifies it (subject IV.1).
+gradle-wrapper.jar
 .gradle/
 build/
 out/

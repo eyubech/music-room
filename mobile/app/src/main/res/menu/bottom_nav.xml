@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Item ids match the destinations in nav_graph.xml. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/eventsFragment"
+        android:icon="@drawable/ic_live"
+        android:title="@string/nav_events" />
+    <item
+        android:id="@+id/playlistsFragment"
+        android:icon="@drawable/ic_queue_music"
+        android:title="@string/nav_playlists" />
+    <item
+        android:id="@+id/devicesFragment"
+        android:icon="@drawable/ic_devices"
+        android:title="@string/nav_devices" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_person"
+        android:title="@string/nav_profile" />
+</menu>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Dark only, like a premium streaming app: the UI never switches to light. -->
+    <style name="Theme.MusicRoom" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorOnPrimary">@color/on_green</item>
+        <item name="colorPrimaryContainer">@color/green_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_green_container</item>
+        <item name="colorPrimaryInverse">@color/green</item>
+        <item name="colorSecondary">@color/gold</item>
+        <item name="colorOnSecondary">@color/on_gold</item>
+        <item name="colorSecondaryContainer">@color/gold_container</item>
+        <item name="colorOnSecondaryContainer">@color/gold_light</item>
+        <item name="colorTertiary">@color/gold_light</item>
+
+        <item name="android:colorBackground">@color/surface</item>
+        <item name="android:windowBackground">@color/surface</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorSurfaceContainerLowest">@color/surface_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/surface_low</item>
+        <item name="colorSurfaceContainer">@color/surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/surface_high</item>
+        <item name="colorSurfaceContainerHighest">@color/surface_highest</item>
+        <item name="colorSurfaceInverse">@color/inverse_surface</item>
+        <item name="colorOnSurfaceInverse">@color/on_surface</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorOutlineVariant">@color/outline_variant</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/surface</item>
+
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.MusicRoom.Headline</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.MusicRoom.Title</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.MusicRoom.ItemTitle</item>
+
+        <item name="toolbarStyle">@style/Widget.MusicRoom.Toolbar</item>
+        <item name="materialButtonStyle">@style/Widget.MusicRoom.Button</item>
+        <item name="textInputStyle">@style/Widget.MusicRoom.TextInput</item>
+        <item name="materialCardViewStyle">@style/Widget.MusicRoom.Card</item>
+        <item name="bottomNavigationStyle">@style/Widget.MusicRoom.BottomNavigation</item>
+        <item name="extendedFloatingActionButtonStyle">@style/Widget.MusicRoom.ExtendedFab</item>
+    </style>
+
+    <!-- Typography: heavy sans for titles, wide-tracked gold capitals for labels. -->
+    <style name="TextAppearance.MusicRoom.Display" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textFontWeight">900</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="TextAppearance.MusicRoom.Headline" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textFontWeight">900</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.MusicRoom.PageTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textFontWeight">900</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.MusicRoom.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textFontWeight">900</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextAppearance.MusicRoom.ItemTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.MusicRoom.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.MusicRoom.Label" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.16</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.MusicRoom.Badge" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textColor">@color/gold</item>
+    </style>
+
+    <style name="TextAppearance.MusicRoom.NavLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <!-- Components -->
+    <style name="Widget.MusicRoom.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.MusicRoom.PageTitle</item>
+        <item name="contentInsetStart">@dimen/screen_margin</item>
+        <item name="titleMarginStart">0dp</item>
+    </style>
+
+    <!-- Green pill with black text. Flat: this is the default button style, so anything set
+         here also leaks into the outlined / text / tonal buttons that don't override it. -->
+    <style name="Widget.MusicRoom.Button" parent="Widget.Material3.Button">
+        <item name="android:stateListAnimator">@animator/press_scale</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MusicRoom.Button</item>
+    </style>
+
+    <!-- White outline, white text. Turns gold when checked in a toggle group. -->
+    <style name="Widget.MusicRoom.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:stateListAnimator">@animator/press_scale</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MusicRoom.Button</item>
+        <item name="android:textColor">@color/button_text_plain</item>
+        <item name="iconTint">@color/button_text_plain</item>
+        <item name="strokeColor">@color/button_stroke</item>
+    </style>
+
+    <style name="Widget.MusicRoom.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:stateListAnimator">@animator/press_scale</item>
+        <item name="android:textAppearance">@style/TextAppearance.MusicRoom.Button</item>
+        <item name="android:textColor">@color/button_text_plain</item>
+    </style>
+
+    <style name="Widget.MusicRoom.Button.Text.Icon" parent="Widget.Material3.Button.TextButton.Icon">
+        <item name="android:stateListAnimator">@animator/press_scale</item>
+        <item name="android:textAppearance">@style/TextAppearance.MusicRoom.Button</item>
+        <item name="android:textColor">@color/button_text_plain</item>
+        <item name="iconTint">@color/button_text_plain</item>
+    </style>
+
+    <!-- Dark gold fill, light gold text: secondary actions. -->
+    <style name="Widget.MusicRoom.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:stateListAnimator">@animator/press_scale</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MusicRoom.Button</item>
+    </style>
+
+    <style name="Widget.MusicRoom.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/field</item>
+        <item name="boxStrokeColor">@color/text_input_stroke</item>
+        <item name="hintTextColor">?attr/colorOnSurface</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <style name="Widget.MusicRoom.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/surface_low</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="strokeColor">@color/hairline</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Selectable option (visibility, licenses): gold outline and check when selected. -->
+    <style name="Widget.MusicRoom.Card.Option">
+        <item name="android:checkable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardBackgroundColor">@color/option_background</item>
+        <item name="strokeColor">@color/option_stroke</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="checkedIcon">@drawable/ic_check_circle</item>
+        <item name="checkedIconTint">@color/gold</item>
+        <item name="checkedIconSize">22dp</item>
+        <item name="checkedIconMargin">14dp</item>
+        <item name="checkedIconGravity">TOP_END</item>
+        <item name="rippleColor">@color/gold_ripple</item>
+    </style>
+
+    <style name="Widget.MusicRoom.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/black</item>
+        <item name="elevation">0dp</item>
+        <item name="itemIconTint">@color/nav_item</item>
+        <item name="itemTextColor">@color/nav_item</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.MusicRoom.NavLabel</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.MusicRoom.NavLabel</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.MusicRoom.BottomNavigation.Indicator</item>
+    </style>
+
+    <style name="Widget.MusicRoom.BottomNavigation.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.MusicRoom.ExtendedFab" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">
+        <item name="android:elevation">12dp</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="28">@color/green</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="28">@color/green</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="iconTint">?attr/colorOnPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textAppearance">@style/TextAppearance.MusicRoom.Button</item>
+        <item name="android:stateListAnimator">@animator/press_scale</item>
+    </style>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Noir" palette: dark only. Near-black surfaces, a vivid green for actions and
+     champagne gold for premium accents (labels, badges, highlights). -->
+<resources>
+    <color name="brand_background">#0B0B0B</color>
+
+    <!-- Surfaces, from deepest to most raised -->
+    <color name="black">#000000</color>
+    <color name="surface">#0B0B0B</color>
+    <color name="surface_lowest">#050505</color>
+    <color name="surface_low">#121212</color>
+    <color name="surface_container">#161616</color>
+    <color name="surface_high">#1E1E1E</color>
+    <color name="surface_highest">#262626</color>
+    <color name="surface_variant">#2A2A2A</color>
+    <color name="field">#121212</color>
+    <color name="hairline">#1F1F1F</color>
+
+    <!-- Content -->
+    <color name="on_surface">#FFFFFF</color>
+    <color name="on_surface_variant">#B3B3B3</color>
+    <color name="muted">#8C8C8C</color>
+    <color name="outline">#727272</color>
+    <color name="outline_variant">#2E2E2E</color>
+
+    <!-- Green: primary actions -->
+    <color name="green">#1ED760</color>
+    <color name="on_green">#000000</color>
+    <color name="green_container">#0E3B21</color>
+    <color name="on_green_container">#B4F5CB</color>
+    <color name="emerald_glow">#FF174A2E</color>
+    <color name="emerald_glow_end">#000B0B0B</color>
+
+    <!-- Gold: premium accents -->
+    <color name="gold">#D4AF6A</color>
+    <color name="gold_light">#EED9A8</color>
+    <color name="gold_dark">#8F6F35</color>
+    <color name="on_gold">#1A1408</color>
+    <color name="gold_container">#2A2214</color>
+    <color name="gold_hairline">#8CD4AF6A</color>
+    <color name="gold_ripple">#33D4AF6A</color>
+    <color name="option_selected">#1A1710</color>
+
+    <!-- Aurora glow behind hero areas (translucent, drawn on black) -->
+    <color name="aurora_emerald">#661ED760</color>
+    <color name="aurora_teal">#4D14B8A6</color>
+    <color name="aurora_gold">#38D4AF6A</color>
+
+    <!-- Skeleton placeholders -->
+    <color name="bone">#1A1A1A</color>
+
+    <color name="error">#F3727F</color>
+    <color name="on_error">#000000</color>
+    <color name="inverse_surface">#2A2A2A</color>
+</resources>

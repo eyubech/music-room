@@ -1,0 +1,78 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+// Build-time configuration comes from the repository's root .env (git-ignored),
+// with environment variables taking precedence (useful in CI).
+def dotenv = new Properties()
+def dotenvFile = rootProject.file('../.env')
+if (dotenvFile.exists()) {
+    dotenvFile.withInputStream { dotenv.load(it) }
+}
+def config = { String key, String fallback ->
+    (System.getenv(key) ?: dotenv.getProperty(key, fallback)).trim()
+}
+
+android {
+    namespace = 'com.musicroom.app'
+    compileSdk = 37
+
+    defaultConfig {
+        applicationId = 'com.musicroom.app'
+        minSdk = 26
+        targetSdk = 37
+        versionCode = 1
+        versionName = '0.1.0'
+
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
+
+        buildConfigField 'String', 'DEFAULT_API_URL',
+                "\"${config('MOBILE_DEFAULT_API_URL', 'http://10.0.2.2:8080/')}\""
+        buildConfigField 'String', 'GOOGLE_WEB_CLIENT_ID',
+                "\"${config('GOOGLE_WEB_CLIENT_ID', '')}\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.core
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.lifecycle.viewmodel
+    implementation libs.lifecycle.livedata
+    implementation libs.recyclerview
+    implementation libs.swiperefreshlayout
+
+    implementation libs.credentials
+    implementation libs.credentials.play.services
+    implementation libs.googleid
+
+    implementation libs.retrofit
+    implementation libs.retrofit.gson
+    implementation libs.okhttp
+    implementation libs.okhttp.logging
+    implementation libs.gson
+
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.espresso.core
+}

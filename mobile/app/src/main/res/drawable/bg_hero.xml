@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Emerald glow at the top of hero screens (login, profile), fading into black. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/surface" />
+        </shape>
+    </item>
+    <item
+        android:height="420dp"
+        android:gravity="top|fill_horizontal">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="@color/emerald_glow_end"
+                android:startColor="@color/emerald_glow"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

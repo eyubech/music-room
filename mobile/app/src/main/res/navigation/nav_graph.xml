@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The start destination is set at runtime by MainActivity (login or events). -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <action
+        android:id="@+id/action_global_settings"
+        app:destination="@id/settingsFragment"
+        app:enterAnim="@animator/nav_default_enter_anim"
+        app:exitAnim="@animator/nav_default_exit_anim"
+        app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+        app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+
+    <!-- Authentication -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.musicroom.app.ui.auth.LoginFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_login_to_forgot"
+            app:destination="@id/forgotPasswordFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_login_to_verify"
+            app:destination="@id/verifyEmailFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.musicroom.app.ui.auth.RegisterFragment"
+        android:label="@string/title_register">
+        <action
+            android:id="@+id/action_register_to_verify"
+            app:destination="@id/verifyEmailFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verifyEmailFragment"
+        android:name="com.musicroom.app.ui.auth.VerifyEmailFragment"
+        android:label="@string/title_verify_email">
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.musicroom.app.ui.auth.ForgotPasswordFragment"
+        android:label="@string/title_forgot_password">
+        <action
+            android:id="@+id/action_forgot_to_reset"
+            app:destination="@id/resetPasswordFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.musicroom.app.ui.auth.ResetPasswordFragment"
+        android:label="@string/title_reset_password">
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.musicroom.app.ui.settings.SettingsFragment"
+        android:label="@string/title_settings" />
+
+    <!-- Main sections (bottom navigation) -->
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.musicroom.app.ui.events.EventsFragment"
+        android:label="@string/nav_events">
+        <action
+            android:id="@+id/action_events_to_create"
+            app:destination="@id/createEventFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createEventFragment"
+        android:name="com.musicroom.app.ui.events.CreateEventFragment"
+        android:label="@string/title_create_event" />
+
+    <fragment
+        android:id="@+id/playlistsFragment"
+        android:name="com.musicroom.app.ui.playlists.PlaylistsFragment"
+        android:label="@string/nav_playlists">
+        <action
+            android:id="@+id/action_playlists_to_create"
+            app:destination="@id/createPlaylistFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createPlaylistFragment"
+        android:name="com.musicroom.app.ui.playlists.CreatePlaylistFragment"
+        android:label="@string/title_create_playlist" />
+
+    <fragment
+        android:id="@+id/devicesFragment"
+        android:name="com.musicroom.app.ui.devices.DevicesFragment"
+        android:label="@string/nav_devices" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.musicroom.app.ui.profile.ProfileFragment"
+        android:label="@string/nav_profile">
+        <action
+            android:id="@+id/action_profile_to_edit"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.musicroom.app.ui.profile.EditProfileFragment"
+        android:label="@string/title_edit_profile" />
+</navigation>

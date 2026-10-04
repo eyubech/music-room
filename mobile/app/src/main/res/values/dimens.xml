@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout grid: every screen uses the same side margin and spacing steps, so content,
+     toolbar titles and list rows line up on one edge. -->
+<resources>
+    <dimen name="screen_margin">20dp</dimen>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">12dp</dimen>
+    <dimen name="space_l">16dp</dimen>
+    <dimen name="space_xl">24dp</dimen>
+    <dimen name="space_xxl">32dp</dimen>
+    <dimen name="section_gap">28dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+
+    <dimen name="cover_size">56dp</dimen>
+    <dimen name="cover_corner_radius">8dp</dimen>
+    <dimen name="list_bottom_space">104dp</dimen>
+</resources>

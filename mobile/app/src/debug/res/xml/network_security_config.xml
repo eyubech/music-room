@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug only: allow HTTP so the app can reach a backend running on the dev machine
+     (10.0.2.2 from the emulator, or a LAN address from a physical device). -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
